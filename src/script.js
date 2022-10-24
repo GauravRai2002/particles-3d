@@ -63,8 +63,8 @@ scene.add(particles);
 
 
 
-let MouseX = 0;
-let MouseY = 0;
+let MouseX = 0.1;
+let MouseY = 0.1;
 const onMouseMove = function(event){
     MouseX = event.clientX / window.innerWidth;
     MouseY = event.clientY / window.innerHeight;
@@ -150,8 +150,8 @@ const tick = () =>
 
     // Update objects
     sphere.rotation.y = .5 * elapsedTime
-    particles.rotation.y = MouseX * 0.3
-    particles.rotation.x = -MouseY * 0.5
+    particles.rotation.y = MouseX * 0.3 * elapsedTime
+    particles.rotation.x = -MouseY * 0.5 * elapsedTime
     // Update Orbital Controls
     // controls.update()
 
